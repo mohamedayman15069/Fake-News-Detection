@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+{% load bootstrap4 %}
+
+<html>
+    <style>
+        .content {
+            max-width: 500px;
+            margin: auto;
+        
+          }
+        h2 { color:white;
+            text-align: center;}
+        h1 {text-align: center;}
+        p {text-align: center;}
+        div {
+            
+            text-align: center;
+        }
+        .ahmed{
+            background-color: Blue;
+        }
+    
+    </style>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <form action={% url 'neuralNetwork:enter' %} method="GET">
+        {% csrf_token %}
+        <div class="w3-container">
+            <h1>Fake News Detection</h1>
+            <p>A click to know fake or not fake </p>
+          
+            <div class="w3-card-4" style="width:100%;">
+              <header class="w3-container w3-blue">
+                <h2>Enter your query here:</h2>
+              </header>
+          
+              <div class="w3-container",text-align: center >
+                  <br>
+                  <br>
+                <input class="btn btn-primary" type="text" id="query" name="query"size="50"><br><br>
+                <input class="btn btn-primary" type="submit" value="Submit"/>
+
+              </br>
+            </br>
+              </div>
+            </div>
+          </div>
+    </form>
+    <div>
+       
+    </div>
+ <br>
+</br>
+    <br>
+{%if st%}
+<div class=" ahmed ">
+<h2>{{st}}</h2>
+</div>
+{%endif%}
+</br>
+</footer>
+<br />
+<form action={% url 'neuralNetwork:validate' %} method="GET">
+    {% csrf_token %}
+    <div class="w3-container">
+      
+      
+        <div class="w3-card-4" style="width:100%;">
+          <header class="w3-container w3-blue">
+            <h2>Enter 0 if the news is fake or 1 otherwise:</h2>
+        </header>
+      
+          <div class="w3-container",text-align: center >
+              <br>
+              <br>
+            <input class="btn btn-primary" type="text" id="val" name="val"size="50"><br><br>
+            <input class="btn btn-primary" type="submit" value="Submit"/>
+
+          </br>
+        </br>
+          </div>
+        </div>
+      </div>
+</form>
+    <br>
+{%if st%}
+<h2>{{query}}</h2>
+{%endif%}
+</br>
+
+</html>
