@@ -32,4 +32,5 @@ To use our fake news detection model, download the code from Section 4, and run 
 ## Conclusion
 We believe that our machine learning model, trained on the Fakeddit dataset and utilizing neural networks and Skip gram Word2Vec, can be used to combat the widespread dissemination of fake news. Our work in this project represents a significant contribution to the fight against fake news and its negative effects on society.
 
-### Please note that the primary objective of this project is to implement various model blocks from scratch, without relying on any external libraries.
+### Please note that 
+the primary objective of this project is to implement various model blocks from scratch, without relying on any external libraries.
